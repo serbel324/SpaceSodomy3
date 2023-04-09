@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4535o81a7yth"]
+
+[ext_resource type="Texture2D" uid="uid://d1e2vf6yelwvv" path="res://textures/asteroid.png" id="1_hygbi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a762n"]
+radius = 13.0
+
+[node name="Asteroid" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("1_hygbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_a762n")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

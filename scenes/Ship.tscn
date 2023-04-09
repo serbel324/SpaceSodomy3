@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3i7thdpedeua"]
+
+[ext_resource type="Texture2D" uid="uid://iqo2acpmjwrg" path="res://textures/AuroraShip.png" id="1_02yy4"]
+[ext_resource type="Script" path="res://scripts/ShipControl.cs" id="3_18pfw"]
+[ext_resource type="Script" path="res://scripts/ShipEnginesScript.cs" id="4_pjlcm"]
+
+[node name="Ship" type="RigidBody2D"]
+scale = Vector2(1.00012, 0.997221)
+inertia = 50.0
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4.9994, -30.0836, 32.996, -30.0836, 34.9958, -13.0362, 100.988, 0, 35.9957, 12.0334, 32.996, 31.0864, -4.9994, 30.0836, -6.99916, 19.0529, -60.9927, 24.0669, -65.9921, 35.0975, -82.99, 36.1003, -94.9886, -1.00279, -81.9902, -35.0975, -64.9922, -34.0947, -61.9926, -25.0697, -7.99904, -19.0529)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.00279, 1)
+texture = ExtResource("1_02yy4")
+
+[node name="Control" type="Node" parent="."]
+script = ExtResource("3_18pfw")
+
+[node name="Engines" type="Node" parent="."]
+script = ExtResource("4_pjlcm")
+mainEnginePower = 300.0
+reverseEnginePower = 200.0
+rotaryEnginePower = 100.0
+sideEnginePower = 200.0
+brakePower = 200.0
+
+[node name="Turrets" type="Node" parent="."]
