@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://e1lk8x06tkws"]
+
+[ext_resource type="Script" path="res://scripts/TurretScript.cs" id="1_hls1k"]
+[ext_resource type="Texture2D" uid="uid://cm0406wx7nhk5" path="res://textures/Turret.png" id="2_bx3u8"]
+[ext_resource type="Script" path="res://scripts/TurretPlatformScript.cs" id="3_pumwx"]
+
+[node name="Turret" type="Node2D"]
+script = ExtResource("1_hls1k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bx3u8")
+
+[node name="Platform" type="Node2D" parent="."]
+script = ExtResource("3_pumwx")
+maxRotationAngle = 90.0
+rotationSpeed = 60.0
+aimedInterval = 2.0

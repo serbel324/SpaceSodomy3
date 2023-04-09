@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b53ydb06agw0d"]
+
+[ext_resource type="Script" path="res://scripts/BulletScript.cs" id="1_4drrl"]
+[ext_resource type="Texture2D" uid="uid://bxdwmxfxpms40" path="res://textures/Bullet.png" id="1_450kr"]
+[ext_resource type="AudioStream" uid="uid://c8a0x6ev5s202" path="res://sounds/MinigunShot.mp3" id="2_uhs73"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xcwg"]
+radius = 5.0
+
+[node name="Bullet" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_4drrl")
+startingSpeed = 2000.0
+timeToLive = 3.0
+shotSound = ExtResource("2_uhs73")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -0.0098935
+scale = Vector2(0.995482, 1)
+shape = SubResource("CircleShape2D_0xcwg")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_450kr")

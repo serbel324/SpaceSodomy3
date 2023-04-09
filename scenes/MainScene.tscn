@@ -37,7 +37,6 @@ position = Vector2(282, 195)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objectToFollow")]
 position = Vector2(282, 195)
-scale = Vector2(1, 1)
 script = ExtResource("3_sae7f")
 objectToFollow = NodePath("../Ship")
 mouseShift = 0.5
