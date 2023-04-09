@@ -4,6 +4,9 @@ using System;
 public partial class CameraScript : Camera2D
 {
     [Export]
+    public Node2D objectToFollow;
+
+    [Export]
     public float mouseShift;
 
     [Export]
@@ -41,11 +44,11 @@ public partial class CameraScript : Camera2D
     {
     }
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         Vector2 mousePosition = GetViewport().GetMousePosition();
         Vector2 screenSize = GetViewport().GetVisibleRect().Size;
-        Position = (mousePosition - screenSize / 2) * mouseShift;
+        Vector2 deltaPosition = (mousePosition - screenSize / 2) / GetViewport().GetCamera2D().Zoom * mouseShift;
+        Position = objectToFollow.Position + deltaPosition;
     }
 }
