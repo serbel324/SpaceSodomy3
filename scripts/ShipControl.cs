@@ -16,16 +16,16 @@ public partial class ShipControl : Node
 
     public Key fireKey = Key.Space;
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
         _engines = GetNode("../Engines");
       //  _turretScripts = new List<TurretScript>(ship.GetComponentsInChildren<TurretScript>());
-	}
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _PhysicsProcess(double delta)
-	{
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _PhysicsProcess(double delta)
+    {
         if (Input.IsKeyPressed(mainEngineKey))
         {
             _engines.Call("MainEngine");
@@ -65,5 +65,5 @@ public partial class ShipControl : Node
             turret.AimOnScreenPoint(GetViewport().GetMousePosition());
         }
 */
-	}
+    }
 }
