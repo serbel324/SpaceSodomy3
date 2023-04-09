@@ -16,44 +16,44 @@ public partial class ShipControl : Node
 
 	public Key fireKey = Key.Space;
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		_engines = GetNode("../Engines");
-	  //  _turretScripts = new List<TurretScript>(ship.GetComponentsInChildren<TurretScript>());
-	}
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        _engines = GetNode("../Engines");
+      //  _turretScripts = new List<TurretScript>(ship.GetComponentsInChildren<TurretScript>());
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _PhysicsProcess(double delta)
-	{
-		if (Input.IsKeyPressed(mainEngineKey))
-		{
-			_engines.Call("MainEngine");
-		}
-		if (Input.IsKeyPressed(reverseEngineKey))
-		{
-			_engines.Call("ReverseEngine");
-		}
-		if (Input.IsKeyPressed(leftRotaryEngineKey))
-		{
-			_engines.Call("LeftRotaryEngine");
-		}
-		if (Input.IsKeyPressed(rightRotaryEngineKey))
-		{
-			_engines.Call("RightRotaryEngine");
-		}
-		if (Input.IsKeyPressed(leftSideEngineKey))
-		{
-			_engines.Call("LeftSideEngine");
-		}
-		if (Input.IsKeyPressed(rightSideEngineKey))
-		{
-			_engines.Call("RightSideEngine");
-		}
-		if (Input.IsKeyPressed(brakeKey))
-		{
-			_engines.Call("Brake");
-		}
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _PhysicsProcess(double delta)
+    {
+        if (Input.IsKeyPressed(mainEngineKey))
+        {
+            _engines.Call("MainEngine");
+        }
+        if (Input.IsKeyPressed(reverseEngineKey))
+        {
+            _engines.Call("ReverseEngine");
+        }
+        if (Input.IsKeyPressed(leftRotaryEngineKey))
+        {
+            _engines.Call("LeftRotaryEngine");
+        }
+        if (Input.IsKeyPressed(rightRotaryEngineKey))
+        {
+            _engines.Call("RightRotaryEngine");
+        }
+        if (Input.IsKeyPressed(leftSideEngineKey))
+        {
+            _engines.Call("LeftSideEngine");
+        }
+        if (Input.IsKeyPressed(rightSideEngineKey))
+        {
+            _engines.Call("RightSideEngine");
+        }
+        if (Input.IsKeyPressed(brakeKey))
+        {
+            _engines.Call("Brake");
+        }
 
 /* TODO: Fix
 		foreach (TurretScript turret in _turretScripts)
@@ -65,5 +65,5 @@ public partial class ShipControl : Node
 			turret.AimOnScreenPoint(GetViewport().GetMousePosition());
 		}
 */
-	}
+    }
 }
