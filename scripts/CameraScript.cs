@@ -4,9 +4,6 @@ using System;
 public partial class CameraScript : Camera2D
 {
     [Export]
-    public Node objectToFollow;
-
-    [Export]
     public float mouseShift;
 
     [Export]
@@ -47,15 +44,8 @@ public partial class CameraScript : Camera2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-        /* TODO
         Vector2 mousePosition = GetViewport().GetMousePosition();
-        float mouseX = (mousePosition - Screen.width / 2) / Screen.width;
-        float mouseY = (mousePosition - Screen.height / 2) / Screen.height;
-        cam.transform.position = new Vector3(
-            objectToFollow.transform.position.x + mouseX * mouseShift,
-            objectToFollow.transform.position.y + mouseY * mouseShift,
-            cam.transform.position.z
-        );
-        */
+        Vector2 screenSize = GetViewport().GetVisibleRect().Size;
+        Position = (mousePosition - screenSize / 2) * mouseShift;
     }
 }
