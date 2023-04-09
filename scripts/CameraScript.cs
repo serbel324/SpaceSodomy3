@@ -4,19 +4,19 @@ using System;
 public partial class CameraScript : Camera2D
 {
 	[Export]
-    public Node objectToFollow;
+	public Node objectToFollow;
 
 	[Export]
-    public float mouseShift;
+	public float mouseShift;
 
 	[Export]
-    public float minZoom;
+	public float minZoom;
 
 	[Export]
-    public float maxZoom;
+	public float maxZoom;
 
 	[Export]
-    public float zoomStep;
+	public float zoomStep;
 
 	public override void _UnhandledInput(InputEvent @event)
 	{
