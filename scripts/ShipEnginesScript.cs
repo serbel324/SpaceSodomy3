@@ -5,25 +5,25 @@ public partial class ShipEnginesScript : Node
 {
     private RigidBody2D _rb;
 
-	[Export]
+    [Export]
     public float mainEnginePower;
-	[Export]
+    [Export]
     public float reverseEnginePower;
-	[Export]
+    [Export]
     public float rotaryEnginePower;
-	[Export]
+    [Export]
     public float sideEnginePower;
-	[Export]
+    [Export]
     public float brakePower;
 
-	public override void _Ready()
-	{	
+    public override void _Ready()
+    {    
         _rb = GetParent() as RigidBody2D;
-	}
+    }
 
-	public override void _Process(double delta)
-	{
-	}
+    public override void _Process(double delta)
+    {
+    }
 
     public void MainEngine()
     {
