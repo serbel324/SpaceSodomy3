@@ -11,9 +11,21 @@
 position = Vector2(259.5, 327)
 scale = Vector2(4.47947, 3.01932)
 texture = ExtResource("1_vmds4")
+metadata/_edit_lock_ = true
 
-[node name="Asteroid" parent="." instance=ExtResource("1_2wuc7")]
-position = Vector2(1364, 400)
+[node name="Asteroids" type="Node" parent="."]
+
+[node name="Asteroid2" parent="Asteroids" instance=ExtResource("1_2wuc7")]
+position = Vector2(1595, 4)
+
+[node name="Asteroid3" parent="Asteroids" instance=ExtResource("1_2wuc7")]
+position = Vector2(1174, -146)
+
+[node name="Asteroid4" parent="Asteroids" instance=ExtResource("1_2wuc7")]
+position = Vector2(1375, 654)
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource("1_2wuc7")]
+position = Vector2(980, 836)
 
 [node name="Ship" parent="." instance=ExtResource("2_c5t7s")]
 position = Vector2(282, 195)
