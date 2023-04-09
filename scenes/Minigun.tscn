@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp71j4ptrul0y"]
+
+[ext_resource type="Script" path="res://scripts/MinigunScript.cs" id="1_s8b6w"]
+[ext_resource type="PackedScene" uid="uid://b53ydb06agw0d" path="res://scenes/Bullet.tscn" id="2_5j8ta"]
+[ext_resource type="Texture2D" uid="uid://mi4o2vkmbpr1" path="res://textures/Minigun.png" id="2_rvmcr"]
+
+[node name="Minigun" type="Node2D"]
+script = ExtResource("1_s8b6w")
+reloadDuration = 0.05
+distanceBetweenBarrels = 20.0
+bulletSpawnForwardShift = 60.0
+dispersion = 5.0
+projectileScene = ExtResource("2_5j8ta")
+recoilImpulseMagnitude = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rvmcr")
