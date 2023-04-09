@@ -3,18 +3,18 @@ using System;
 
 public partial class ShipControl : Node
 {
-	private Node _engines;
+    private Node _engines;
    // private List<TurretScript> _turretScripts;
 
-	public Key mainEngineKey = Key.W;
-	public Key reverseEngineKey = Key.S;
-	public Key leftRotaryEngineKey = Key.A;
-	public Key rightRotaryEngineKey = Key.D;
-	public Key leftSideEngineKey = Key.Q;
-	public Key rightSideEngineKey = Key.E;
-	public Key brakeKey = Key.F;
+    public Key mainEngineKey = Key.W;
+    public Key reverseEngineKey = Key.S;
+    public Key leftRotaryEngineKey = Key.A;
+    public Key rightRotaryEngineKey = Key.D;
+    public Key leftSideEngineKey = Key.Q;
+    public Key rightSideEngineKey = Key.E;
+    public Key brakeKey = Key.F;
 
-	public Key fireKey = Key.Space;
+    public Key fireKey = Key.Space;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -56,14 +56,14 @@ public partial class ShipControl : Node
         }
 
 /* TODO: Fix
-		foreach (TurretScript turret in _turretScripts)
-		{
-			if (Input.IsKeyPressed(fireKey))
-			{
-				turret.Fire();
-			}
-			turret.AimOnScreenPoint(GetViewport().GetMousePosition());
-		}
+        foreach (TurretScript turret in _turretScripts)
+        {
+            if (Input.IsKeyPressed(fireKey))
+            {
+                turret.Fire();
+            }
+            turret.AimOnScreenPoint(GetViewport().GetMousePosition());
+        }
 */
     }
 }
