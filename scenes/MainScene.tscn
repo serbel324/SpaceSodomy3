@@ -36,6 +36,7 @@ position = Vector2(282, 195)
 [node name="Camera2D" type="Camera2D" parent="Ship"]
 scale = Vector2(0.99988, 1.00279)
 script = ExtResource("3_sae7f")
+mouseShift = 0.5
 minZoom = 0.1
 maxZoom = 10.0
 zoomStep = 1.2
