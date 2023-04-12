@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3i7thdpedeua"]
+[gd_scene load_steps=7 format=3 uid="uid://d3i7thdpedeua"]
 
 [ext_resource type="Texture2D" uid="uid://iqo2acpmjwrg" path="res://textures/AuroraShip.png" id="1_02yy4"]
 [ext_resource type="Script" path="res://scripts/ShipControl.cs" id="3_18pfw"]
 [ext_resource type="PackedScene" uid="uid://e1lk8x06tkws" path="res://scenes/Turret.tscn" id="4_gynht"]
 [ext_resource type="Script" path="res://scripts/ShipEnginesScript.cs" id="4_pjlcm"]
+[ext_resource type="Script" path="res://scripts/WeaponController.cs" id="4_uwog0"]
 [ext_resource type="PackedScene" uid="uid://bp71j4ptrul0y" path="res://scenes/Minigun.tscn" id="5_0w6sp"]
 
 [node name="Ship" type="RigidBody2D"]
@@ -29,29 +30,30 @@ rotaryEnginePower = 100.0
 sideEnginePower = 200.0
 brakePower = 200.0
 
-[node name="Turrets" type="Node2D" parent="."]
+[node name="Weapons" type="Node2D" parent="."]
+script = ExtResource("4_uwog0")
+turretGunType = ExtResource("5_0w6sp")
+
+[node name="Turrets" type="Node2D" parent="Weapons"]
 rotation = -0.000451856
+scale = Vector2(1, 1)
 
-[node name="Turret" parent="Turrets" instance=ExtResource("4_gynht")]
-position = Vector2(14, -20)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-gunScene = ExtResource("5_0w6sp")
-
-[node name="Turret2" parent="Turrets" instance=ExtResource("4_gynht")]
+[node name="Turret2" parent="Weapons/Turrets" instance=ExtResource("4_gynht")]
 position = Vector2(-72.9794, -26.1054)
 rotation = -1.57034
 scale = Vector2(0.5, 0.5)
-gunScene = ExtResource("5_0w6sp")
 
-[node name="Turret3" parent="Turrets" instance=ExtResource("4_gynht")]
+[node name="Turret3" parent="Weapons/Turrets" instance=ExtResource("4_gynht")]
 position = Vector2(-74.0033, 27.0418)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-gunScene = ExtResource("5_0w6sp")
 
-[node name="Turret4" parent="Turrets" instance=ExtResource("4_gynht")]
+[node name="Turret4" parent="Weapons/Turrets" instance=ExtResource("4_gynht")]
 position = Vector2(14.284, 20.9752)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-gunScene = ExtResource("5_0w6sp")
+
+[node name="Turret" parent="Weapons/Turrets" instance=ExtResource("4_gynht")]
+position = Vector2(14, -20)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
