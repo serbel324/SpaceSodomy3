@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3i7thdpedeua"]
+[gd_scene load_steps=7 format=3 uid="uid://bnboahks7yivk"]
 
 [ext_resource type="Texture2D" uid="uid://iqo2acpmjwrg" path="res://textures/AuroraShip.png" id="1_02yy4"]
 [ext_resource type="Script" path="res://scripts/ShipControl.cs" id="3_18pfw"]
 [ext_resource type="PackedScene" uid="uid://e1lk8x06tkws" path="res://scenes/Turret.tscn" id="4_gynht"]
 [ext_resource type="Script" path="res://scripts/ShipEnginesScript.cs" id="4_pjlcm"]
 [ext_resource type="Script" path="res://scripts/WeaponController.cs" id="4_uwog0"]
-[ext_resource type="PackedScene" uid="uid://bp71j4ptrul0y" path="res://scenes/Minigun.tscn" id="5_0w6sp"]
+[ext_resource type="PackedScene" uid="uid://bp71j4ptrul0y" path="res://scenes/MachineGun.tscn" id="5_sgfaq"]
 
 [node name="Ship" type="RigidBody2D"]
 scale = Vector2(1.00012, 0.997221)
@@ -32,11 +32,10 @@ brakePower = 200.0
 
 [node name="Weapons" type="Node2D" parent="."]
 script = ExtResource("4_uwog0")
-turretGunType = ExtResource("5_0w6sp")
+turretGunType = ExtResource("5_sgfaq")
 
 [node name="Turrets" type="Node2D" parent="Weapons"]
 rotation = -0.000451856
-scale = Vector2(1, 1)
 
 [node name="Turret2" parent="Weapons/Turrets" instance=ExtResource("4_gynht")]
 position = Vector2(-72.9794, -26.1054)
