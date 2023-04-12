@@ -50,6 +50,7 @@ public partial class MinigunScript : BaseGun
         Vector2 pos = GlobalPosition + GlobalTransform.Y * distanceBetweenBarrels / 2 * _barrel;
         pos += GlobalTransform.X * bulletSpawnForwardShift;
         float angleDeviation = _random.RandfRange(-dispersion, dispersion);
+
         RigidBody2D newProj = projectileScene.Instantiate() as RigidBody2D;
         newProj.GlobalRotationDegrees = GlobalRotationDegrees + angleDeviation;
         newProj.GlobalPosition = pos;

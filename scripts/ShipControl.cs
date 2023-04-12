@@ -31,7 +31,7 @@ public partial class ShipControl : Node
     public override void _Ready()
     {
         _engines = GetNode("../Engines");
-        _turretsNode = GetNode("../Turrets");
+        _turretsNode = GetNode("../Weapons/Turrets");
         _turrets = new List<TurretScript>();
         foreach (Node turret in _turretsNode.GetChildren())
         {
@@ -73,10 +73,7 @@ public partial class ShipControl : Node
 
         foreach (TurretScript turret in _turrets)
         {
-            if (Input.IsKeyPressed(fireKey))
-            {
-                turret.Fire();
-            }
+            turret.SetActive(Input.IsKeyPressed(fireKey));
             turret.AimOnScreenPoint(GetViewport().GetMousePosition(), delta);
         }
     }
