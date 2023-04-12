@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class BulletScript : RigidBody2D
+public partial class Bullet : RigidBody2D
 {
     [Export]
     public float startingSpeed;

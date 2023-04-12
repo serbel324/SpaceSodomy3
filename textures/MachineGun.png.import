@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mi4o2vkmbpr1"
-path="res://.godot/imported/MiniGun.png-125a803187ca3828806ce4cf995aa204.ctex"
+uid="uid://0s8p3c7g2a0f"
+path="res://.godot/imported/MachineGun.png-f6dd046fd5323bd4ec71f8328d9d6325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/MiniGun.png"
-dest_files=["res://.godot/imported/MiniGun.png-125a803187ca3828806ce4cf995aa204.ctex"]
+source_file="res://textures/MachineGun.png"
+dest_files=["res://.godot/imported/MachineGun.png-f6dd046fd5323bd4ec71f8328d9d6325.ctex"]
 
 [params]
 
