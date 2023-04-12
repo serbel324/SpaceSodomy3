@@ -44,7 +44,7 @@ public partial class CameraScript : Camera2D
     {
     }
 
-    public override void _PhysicsProcess(double delta)
+    public override void _Process(double delta)
     {
         Vector2 mousePosition = GetViewport().GetMousePosition();
         Vector2 screenSize = GetViewport().GetVisibleRect().Size;

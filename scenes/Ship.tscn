@@ -36,7 +36,6 @@ turretGunType = ExtResource("5_0w6sp")
 
 [node name="Turrets" type="Node2D" parent="Weapons"]
 rotation = -0.000451856
-scale = Vector2(1, 1)
 
 [node name="Turret2" parent="Weapons/Turrets" instance=ExtResource("4_gynht")]
 position = Vector2(-72.9794, -26.1054)

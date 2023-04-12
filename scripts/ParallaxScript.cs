@@ -1,10 +1,12 @@
 using Godot;
 using System;
 
-public partial class ParallaxScript : Node2D
+public partial class ParallaxScript : Sprite2D
 {
     [Export]
     public float parallaxCoefficient;
+    [Export]
+    public float backgroundScale;
 
     private Camera2D _mainCamera;
 
@@ -17,6 +19,11 @@ public partial class ParallaxScript : Node2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
+        Vector2 screenSize = GetViewport().GetVisibleRect().Size;
+        float ScaleX = backgroundScale * screenSize.X/Texture.GetSize().X;
+        float cameraZoom = _mainCamera.Zoom.X;
+        Scale = new Vector2(ScaleX, ScaleX)/cameraZoom;
         Position = _mainCamera.GlobalPosition * parallaxCoefficient;
+        
     }
 }
