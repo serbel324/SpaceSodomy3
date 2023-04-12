@@ -9,34 +9,31 @@
 [node name="MainScene" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(259.5, 327)
-scale = Vector2(31.8945, 19.8226)
 texture = ExtResource("1_vmds4")
 script = ExtResource("2_lehee")
-parallaxCoefficient = 0.9
+parallaxCoefficient = 1.0
+backgroundScale = 3.0
 
 [node name="Asteroids" type="Node" parent="."]
 
 [node name="Asteroid2" parent="Asteroids" instance=ExtResource("1_2wuc7")]
-position = Vector2(1595, 4)
+position = Vector2(1363, 100)
 
 [node name="Asteroid3" parent="Asteroids" instance=ExtResource("1_2wuc7")]
-position = Vector2(1174, -146)
+position = Vector2(938, 14)
 
 [node name="Asteroid4" parent="Asteroids" instance=ExtResource("1_2wuc7")]
-position = Vector2(1375, 654)
+position = Vector2(1339, 402)
 
 [node name="Asteroid" parent="Asteroids" instance=ExtResource("1_2wuc7")]
-position = Vector2(980, 836)
+position = Vector2(816, 596)
 
 [node name="Asteroid5" parent="Asteroids" instance=ExtResource("1_2wuc7")]
-position = Vector2(432, -83)
+position = Vector2(872, -395)
 
 [node name="Ship" parent="." instance=ExtResource("2_c5t7s")]
-position = Vector2(282, 195)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objectToFollow")]
-position = Vector2(282, 195)
 script = ExtResource("3_sae7f")
 objectToFollow = NodePath("../Ship")
 mouseShift = 0.5
