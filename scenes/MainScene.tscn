@@ -1,18 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf6x3hf7giqjm"]
+[gd_scene load_steps=7 format=3 uid="uid://cf6x3hf7giqjm"]
 
 [ext_resource type="PackedScene" uid="uid://c4535o81a7yth" path="res://scenes/Asteroid.tscn" id="1_2wuc7"]
 [ext_resource type="Texture2D" uid="uid://u7w61o8vjxbv" path="res://textures/background.png" id="1_vmds4"]
-[ext_resource type="PackedScene" uid="uid://bnboahks7yivk" path="res://scenes/Ship.tscn" id="2_c5t7s"]
-[ext_resource type="Script" path="res://scripts/ParallaxScript.cs" id="2_lehee"]
+[ext_resource type="PackedScene" uid="uid://dnudj85x7d67l" path="res://scenes/ParallaxLayerScalable.tscn" id="1_yt4ig"]
+[ext_resource type="PackedScene" uid="uid://d3i7thdpedeua" path="res://scenes/Ship.tscn" id="2_c5t7s"]
+[ext_resource type="Script" path="res://scripts/ParallaxScript.cs" id="2_rkiw1"]
+
 [ext_resource type="Script" path="res://scripts/CameraScript.cs" id="3_sae7f"]
 
 [node name="MainScene" type="Node2D"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" parent="ParallaxBackground" instance=ExtResource("1_yt4ig")]
+
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_vmds4")
-script = ExtResource("2_lehee")
-parallaxCoefficient = 1.0
-backgroundScale = 3.0
+script = ExtResource("2_rkiw1")
+parallaxCoefficient = 0.1
+backgroundScale = 1.5
 
 [node name="Asteroids" type="Node" parent="."]
 
