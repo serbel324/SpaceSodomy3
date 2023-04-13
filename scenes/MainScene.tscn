@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dnudj85x7d67l" path="res://scenes/ParallaxLayerScalable.tscn" id="1_yt4ig"]
 [ext_resource type="PackedScene" uid="uid://d3i7thdpedeua" path="res://scenes/Ship.tscn" id="2_c5t7s"]
 [ext_resource type="Script" path="res://scripts/ParallaxScript.cs" id="2_rkiw1"]
+
 [ext_resource type="Script" path="res://scripts/CameraScript.cs" id="3_sae7f"]
 
 [node name="MainScene" type="Node2D"]
