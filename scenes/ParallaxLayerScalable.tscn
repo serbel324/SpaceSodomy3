@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnudj85x7d67l"]
+
+[ext_resource type="Script" path="res://scripts/ParallaxLayerScalable.cs" id="1_omny0"]
+[ext_resource type="Texture2D" uid="uid://u7w61o8vjxbv" path="res://textures/background.png" id="2_qmfhw"]
+
+[node name="ParallaxLayer" type="ParallaxLayer"]
+motion_scale = Vector2(0.01, 0.01)
+script = ExtResource("1_omny0")
+backgroundScale = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qmfhw")
