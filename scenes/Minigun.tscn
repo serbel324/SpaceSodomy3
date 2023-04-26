@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/MiniGun.cs" id="1_65rqe"]
 [ext_resource type="PackedScene" uid="uid://c15clgjpqeqin" path="res://scenes/Bullet.tscn" id="2_pe0tb"]
-[ext_resource type="Texture2D" uid="uid://mi4o2vkmbpr1" path="res://textures/MiniGun.png" id="3_mo7pm"]
+[ext_resource type="Texture2D" uid="uid://mi4o2vkmbpr1" path="res://textures/Minigun.png" id="3_mo7pm"]
 
 [node name="Minigun" type="Node2D"]
 script = ExtResource("1_65rqe")
